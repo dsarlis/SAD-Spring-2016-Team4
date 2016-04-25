@@ -67,6 +67,9 @@ public class AccountsWebApplication {
 		List<Map<String, Object>> accounts = jdbcTemplate
 				.queryForList("SELECT number FROM T_ACCOUNT");
 		logger.info("System has " + accounts.size() + " accounts");
+		List<Map<String, Object>> products = jdbcTemplate
+				.queryForList("SELECT number FROM T_PRODUCT");
+		logger.info("System has " + products.size() + " products");
 
 		// Populate with random balances
 		Random rand = new Random();
@@ -78,6 +81,15 @@ public class AccountsWebApplication {
 			jdbcTemplate.update(
 					"UPDATE T_ACCOUNT SET balance = ? WHERE number = ?",
 					balance, number);
+		}
+
+		for (Map<String, Object> item : products) {
+			String number = (String) item.get("number");
+			BigDecimal price = new BigDecimal(rand.nextInt(10000) / 100.0)
+					.setScale(2, BigDecimal.ROUND_HALF_UP);
+			jdbcTemplate.update(
+					"UPDATE T_PRODUCT SET price = ? WHERE number = ?",
+					price, number);
 		}
 
 		return dataSource;

@@ -28,6 +28,7 @@ public class Account implements Serializable {
 	protected String owner;
 
 	protected BigDecimal balance;
+	protected String product;
 
 	protected static Long getNextId() {
 		synchronized (nextId) {
@@ -40,6 +41,7 @@ public class Account implements Serializable {
 	 */
 	protected Account() {
 		balance = BigDecimal.ZERO;
+		product = "Beer";
 	}
 
 	public Account(String number, String owner) {
@@ -47,8 +49,17 @@ public class Account implements Serializable {
 		this.number = number;
 		this.owner = owner;
 		balance = BigDecimal.ZERO;
+		product="Beer";
 	}
 
+	public Account(String number, String owner,String product) {
+		id = getNextId();
+		this.number = number;
+		this.owner = owner;
+		balance = BigDecimal.ZERO;
+		this.product=product;
+
+	}
 	public long getId() {
 		return id;
 	}
@@ -91,9 +102,17 @@ public class Account implements Serializable {
 		balance.add(amount);
 	}
 
+	public String getProduct() {
+		return product;
+	}
+
+	public void setProduct(String product) {
+		this.product = product;
+	}
+
 	@Override
 	public String toString() {
-		return number + " [" + owner + "]: $" + balance;
+		return number + " [" + owner + "]: $" + balance+","+product;
 	}
 
 }

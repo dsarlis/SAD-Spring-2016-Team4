@@ -1,6 +1,7 @@
 package edu.cmu.sad.microservices.services;
 
 import edu.cmu.sad.microservices.services.accounts.AccountsServer;
+import edu.cmu.sad.microservices.services.products.ProductsServer;
 import edu.cmu.sad.microservices.services.registration.RegistrationServer;
 import edu.cmu.sad.microservices.services.web.WebServer;
 
@@ -42,6 +43,8 @@ public class Main {
 			SpringApplication.run(AccountsServer.class, args);
 		} else if (serverName.equals("web")) {
 			SpringApplication.run(WebServer.class, args);
+		} else if (serverName.equals("products")) {
+			SpringApplication.run(ProductsServer.class, args);
 		} else {
 			System.out.println("Unknown server type: " + serverName);
 			usage();

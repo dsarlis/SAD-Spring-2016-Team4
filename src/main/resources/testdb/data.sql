@@ -1,5 +1,5 @@
 
-insert into T_ACCOUNT (NUMBER, NAME) values ('123456789', 'Keri Lee');
+insert into T_ACCOUNT (NUMBER, NAME, PRODUCT) values ('123456789', 'Keri Lee','Yogurt');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456001', 'Dollie R. Schnidt');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456002', 'Cornelia J. LeClerc');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456003', 'Cynthia Rau');
@@ -20,3 +20,18 @@ insert into T_ACCOUNT (NUMBER, NAME) values ('123456017', 'Rachel Vogt');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456018', 'Julia DeLong');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456019', 'Mark T. Rizzoli');
 insert into T_ACCOUNT (NUMBER, NAME) values ('123456020', 'Maria J. Angelo');
+
+insert into T_PRODUCT (NUMBER, NAME, PRICE) values ('123456', 'Beer',6);
+insert into T_PRODUCT (NUMBER, NAME) values ('000001', 'Milk');
+insert into T_PRODUCT (NUMBER, NAME) values ('000002', 'Ice Cream');
+insert into T_PRODUCT (NUMBER, NAME) values ('000003', 'Yogurt');
+insert into T_PRODUCT (NUMBER, NAME) values ('000004', 'Apple');
+insert into T_PRODUCT (NUMBER, NAME) values ('000005', 'Sweet Potato');
+insert into T_PRODUCT (NUMBER, NAME) values ('000006', 'Mocha Coffee');
+insert into T_PRODUCT (NUMBER, NAME) values ('000007', 'Greek Yogurt');
+insert into T_PRODUCT (NUMBER, NAME) values ('000008', 'Sweet Popcorn');
+insert into T_PRODUCT (NUMBER, NAME) values ('000009', 'Wine');
+insert into T_PRODUCT (NUMBER, NAME) values ('000010', 'Balley');
+insert into T_PRODUCT (NUMBER, NAME) values ('000011', 'Fried Rice');
+insert into T_PRODUCT (NUMBER, NAME) values ('000012', 'Pizza');
+insert into T_PRODUCT (NUMBER, NAME) values ('000013', 'Cappuccino Coffee');

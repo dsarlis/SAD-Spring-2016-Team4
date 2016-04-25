@@ -23,6 +23,7 @@
 					<th>Account Number</th>
 					<th>Owner</th>
 					<th>Balance</th>
+					<th>Favorite Product</th>
 				</tr>
 			</thead>
 
@@ -33,6 +34,9 @@
 						th:text="|${account.number}|">11111111</a></td>
 					<td th:text="${account.owner}">Owner</td>
 					<td th:text="${account.balance}">0</td>
+					<td><a href="product.html"
+						th:href="@{|/products/name/${account.product}|}"
+						th:text="|${account.product}|">Milk</a></td>
 				</tr>
 			</tbody>
 		</table>

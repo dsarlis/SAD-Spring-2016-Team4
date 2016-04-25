@@ -21,7 +21,7 @@ public class WebServer {
 	 * doesn't matter.
 	 */
 	public static final String ACCOUNTS_SERVICE_URL = "http://ACCOUNTS-SERVICE";
-
+	public static final String PRODUCTS_SERVICE_URL = "http://PRODUCTS-SERVICE";
 	/**
 	 * Run the application using Spring Boot and an embedded servlet engine.
 	 * 
@@ -35,13 +35,18 @@ public class WebServer {
 	}
 
 	/**
-	 * The AccountService encapsulates the interaction with the micro-service.
+	 * The AccountService and ProductService encapsulate the interaction with the micro-service.
 	 * 
 	 * @return A new service instance.
 	 */
 	@Bean
 	public WebAccountsService accountsService() {
 		return new WebAccountsService(ACCOUNTS_SERVICE_URL);
+	}
+
+	@Bean
+	public WebProductsService productsService() {
+		return new WebProductsService(PRODUCTS_SERVICE_URL);
 	}
 
 	/**
@@ -53,7 +58,10 @@ public class WebServer {
 	public WebAccountsController accountsController() {
 		return new WebAccountsController(accountsService());
 	}
-
+	@Bean
+	public WebProductsController productsController() {
+		return new WebProductsController(productsService());
+	}
 	@Bean
 	public HomeController homeController() {
 		return new HomeController();
