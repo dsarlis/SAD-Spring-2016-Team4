@@ -15,6 +15,7 @@
 		<config>java:edu.cmu.sad.microservices.services.accounts.AccountsServer</config>
 		<config>java:edu.cmu.sad.microservices.services.products.ProductsServer</config>
 		<config>java:edu.cmu.sad.microservices.products.ProductsWebApplication</config>
+		<config>java:edu.cmu.sad.microservices.services.movie.MovieServer</config>
 	</autoconfigs>
 	<configSets>
 		<configSet>
@@ -28,6 +29,7 @@
 				<config>java:edu.cmu.sad.microservices.services.web.WebServer</config>
 				<config>java:edu.cmu.sad.microservices.services.products.ProductsServer</config>
                 <config>java:edu.cmu.sad.microservices.products.ProductsWebApplication</config>
+                <config>java:edu.cmu.sad.microservices.services.movie.MovieServer</config>
 			</configs>
 			<profiles>
 			</profiles>
